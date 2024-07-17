@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@100;300;400;700&family=Montserrat:wght@900&family=Oleo+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500;600;700;800&family=Teko:wght@700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.store-section {
+    margin: 10rem 0;
+}
+
+.store-section .store-text {
+    font-family: 'Teko';
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.store-section .store-text h2 {
+    margin-bottom: -4rem;
+    background-color: #1b1b1b;
+}
+
+.store-section .store-text h2:nth-child(2) {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: 600;
+    /* margin-bottom: 10px */
+}
+
+.store-section .store-text h2:nth-child(3) {
+    margin-bottom: -84px;
+}
+
+.store-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.store-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: width 0.5s ease, border-radius 0.5s ease;
+}

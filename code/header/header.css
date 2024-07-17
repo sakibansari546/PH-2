@@ -1,0 +1,33 @@
+header {
+    padding: 20px 10rem;
+    background: transparent;
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    width: 3vw;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .menu i {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+header .menu i:hover {
+    transform: scale(1.1);
+}

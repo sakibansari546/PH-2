@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@100;300;400;700&family=Montserrat:wght@900&family=Oleo+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500;600;700;800&family=Teko:wght@700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.hero-section{
+    width: 100%;
+    height: 90vh;
+    margin: 7rem 0;
+    gap: 20px;
+    padding-left: 7rem;
+}
+
+.hero-section h1{
+    font-family: 'Teko' !important;
+    color: white;
+    font-size: 8rem;
+    font: bolder;
+    text-transform: uppercase;
+    margin: -70px 0;
+}
+.hero-section .design{
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.hero-section .hero-sm-heading{
+    font-family: "Poppins";
+    margin-top: 3rem;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font: 600;
+    color: white;
+}
+
+.hero-section .hero-sm-heading span{
+    cursor: default;
+    position: relative;
+}
+
+.hero-section .hero-sm-heading .coc-span::before,
+.hero-section .hero-sm-heading .brawl-stars::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ffffff63;
+    top: 100%;
+    transition: background-color 0.3s;
+}
+
+.hero-section .hero-sm-heading .coc-span:hover::before,
+.hero-section .hero-sm-heading .brawl-stars:hover::before{
+    background: #ffffff;
+}
+
+.hero-section .hero-desc{
+    margin-top: 8rem;
+    color: #838383;
+    width: 25vw;
+}
+.hero-section .hero-desc span{
+    color: white;
+}

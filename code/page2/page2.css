@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@100;300;400;700&family=Montserrat:wght@900&family=Oleo+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500;600;700;800&family=Teko:wght@700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.game-section {
+    padding: 3rem 0rem;
+    margin-block: 10rem;
+}
+
+.game-section .games {
+    display: flex;
+    gap: 20px;
+}
+
+.game-section .game-1 {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: -20px;
+}
+
+.game-section .game-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: initial;
+    background: #000;
+    overflow: hidden;
+}
+
+.gameImgText {
+    width: 60vw;
+    height: 80vh;
+    background: #000;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.game-section .game-1 .gameName {
+    font-family: 'Teko';
+    width: 100%;
+    font-size: 8rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.146);
+    margin-bottom: -75px;
+    mix-blend-mode: difference;
+    padding: 0 0rem 0 25rem;
+    white-space: nowrap;
+    position: absolute;
+    top: -16%;
+    z-index: 999;
+}
+
+.gameTextAnimation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    margin-top: 7rem;
+}
+
+.gameTextAnimation .gameTeaxt {
+    font-family: 'Roboto';
+    font-weight: 100;
+    color: white;
+    transform: rotate(90deg);
+    margin-right: -4rem;
+}
+
+.page-3 .gameTextAnimation .view-project {
+    border-color: #f93ef6;
+}
+
+.page-4 .gameTextAnimation .view-project {
+    border-color: #3686bf;
+}
+
+.page-5 .gameTextAnimation .view-project {
+    border-color: #3d8ebe;
+}
+
+.gameTextAnimation .view-project {
+    /* padding: 5rem 3rem; */
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 3px;
+    border-color: #c1986f;
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 4rem;
+    position: relative;
+    transition: all 0.5s ease;
+    background: transparent;
+    /* Ensure initial background is transparent */
+}
+
+.view-project p {
+    letter-spacing: 15px;
+    font-size: 16px;
+    /* Adjust as needed */
+    text-transform: uppercase;
+    margin: 0;
+    white-space: nowrap;
+    transition: letter-spacing 0.5s ease;
+    z-index: 1;
+    position: relative;
+    animation: rotaion 5s linear infinite;
+}
+
+.view-project::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #c1986f;
+    border-radius: 50%;
+    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease;
+    z-index: 0;
+}
+
+.page-3 .view-project::before {
+    background: #f93ef6;
+}
+
+.page-4 .view-project::before {
+    background: #3686bf;
+}
+
+.page-5 .view-project::before {
+    background: #3d8ebe;
+}
+
+.view-project:hover::before {
+    width: 190px;
+    height: 190px;
+    top: -0.4%;
+    left: -0.7%;
+    cursor: none;
+}
+
+.view-project:hover p {
+    letter-spacing: normal;
+    cursor: none;
+}
+
+@keyframes rotaion {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gameNo {
+    position: relative;
+    overflow: hidden;
+}
+
+.gameNo p {
+    font-family: 'Kanit';
+    font-size: 15rem;
+    font-weight: 900;
+    transform: rotate(90deg);
+    -webkit-text-stroke: 2px #ffffff27;
+    color: transparent;
+    background: transparent;
+    position: relative;
+    border-bottom: 0;
+    left: 5vw;
+    top: -4vw;
+}
