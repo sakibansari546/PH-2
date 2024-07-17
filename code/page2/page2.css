@@ -41,9 +41,9 @@
     width: 100%;
     font-size: 8rem;
     font-weight: 700;
-    color: white;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.146);
+    /* -webkit-text-stroke: 2px #fff; */
     margin-bottom: -75px;
     mix-blend-mode: difference;
     padding: 0 0rem 0 25rem;

@@ -48,7 +48,7 @@ function onload() {
     gamePage3()
     gamePage4()
 
-    animateStoreSection()
+    animateStoreText()
 }
 
 // GSAP Scroll Trigger
@@ -59,7 +59,7 @@ function hero() {
             trigger: ".page-1",
             scroller: "#main",
             // markers: true,
-            start: "top 0%",
+            start: "top 10%",
             end: "top -100%",
             scrub: 2,
             // pin: true
@@ -393,17 +393,34 @@ function gamePage4() {
 
 // Function to animate text elements
 function animateStoreText() {
-    gsap.from('.store-image img', {
+    gsap.to('.store-image img', {
         scrollTrigger: {
             scroller: "#main",
             trigger: '.store-image',
-            start: "top 80%", // Trigger when the image is near the top
-            end: "top 20%", // End the animation when the image reaches the top
-            scrub: 1,
-            markers: true
+            start: "top 40%", // Start the animation when the image is at the center of the viewport
+            end: "top -200%", // End the animation when the bottom of the image reaches the top of the viewport
+            scrub: true, // Smooth animation based on scroll position
+            // markers: true, // For debugging purposes, remove this in production
+            pin: true // Pin the animation to the viewport while scrolling
         },
-        width: "100pvh", // Increase width
+        width: "100vw", // Increase width
+        height: "150vh", // Increase height
         borderRadius: "0%", // Change border-radius to 0%
+        ease: "power1.inOut"
+    });
+
+    gsap.from('.insta-posts .post', {
+        scrollTrigger: {
+            scroller: "#main",
+            trigger: '.insta-posts',
+            start: "top 80%", // Start when the top of the posts is near the viewport
+            end: "top 30%", // End when the posts are in view
+            scrub: true, // Smooth animation based on scroll position
+            // markers: true // For debugging purposes
+        },
+        y: 100, // Move posts up from below
+        opacity: 0, // Start from transparent
+        stagger: 0.2, // Stagger the animation for each post
         ease: "power1.inOut"
     });
 }
