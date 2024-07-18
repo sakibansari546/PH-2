@@ -22,3 +22,45 @@ body {
     max-height: 100vh;
     background-color: #1b1b1b;
 }
+
+
+#blob{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    aspect-ratio: 1;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    /* top: 50%; */
+    /* transform: translate(-50%,-50%); */
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right ,
+        aquamarine,purple
+    );
+    animation: rotate 20s infinite linear;
+    filter: blur(200px);
+}
+
+#blur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(0deg);
+    }
+    50%{
+        scale: 1.3;
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
