@@ -59,7 +59,7 @@ function hero() {
             trigger: ".page-1",
             scroller: "#main",
             // markers: true,
-            start: "top 10%",
+            start: "top 0%",
             end: "top -100%",
             scrub: 2,
             // pin: true
@@ -71,6 +71,32 @@ function hero() {
         opacity: 0,
         ease: "none"
     });
+
+    gsap.from('.hero-section h1', {
+        rotationX: -10,
+        rotationY: -10,
+        skewY: 17,
+        translateY: -100,
+        opacity: 0,
+        ease: "none"
+    })
+
+    gsap.from('.hero-section .hero-sm-heading', {
+        rotationX: -10,
+        rotationY: -10,
+        skewY: 17,
+        translateY: -100,
+        opacity: 0,
+        ease: "none"
+    })
+    gsap.from('.hero-section .hero-desc', {
+        rotationX: -10,
+        rotationY: -10,
+        skewY: 17,
+        translateY: -100,
+        opacity: 0,
+        ease: "none"
+    })
 }
 
 
@@ -424,5 +450,93 @@ function animateStoreText() {
         ease: "power1.inOut"
     });
 }
+gsap.registerPlugin(ScrollTrigger);
 
+function addImageScrollAnimation() {
+    gsap.utils.toArray('.page-7 section').forEach((section, index) => {
+        const image = document.querySelector(`#preview-${index + 1} img`);
+        const startCondition = index === 0 ? 'top top' : 'bottom bottom';
 
+        gsap.to(image, {
+            scrollTrigger: {
+                scroller: "#main",
+                trigger: section,
+                start: startCondition,
+                end: () => {
+                    const viewPortHeight = window.innerHeight;
+                    const sectionBottom = section.offsetTop + section.offsetHeight;
+                    const additionalDistance = viewPortHeight * 0.5;
+                    const endValue = sectionBottom - viewPortHeight + additionalDistance;
+                    return `+=${endValue}`;
+                },
+                scrub: 1,
+            },
+            scale: 3,
+            ease: 'none',
+        });
+    });
+}
+
+function animateClipPath(sectionId, previewId, startClipPath, endClipPath, start = 'top center', end = 'bottom top') {
+    let section = document.querySelector(sectionId);
+    let preview = document.querySelector(previewId);
+
+    ScrollTrigger.create({
+        scroller: "#main",
+        trigger: section,
+        start: start,
+        end: end,
+        onEnter: () => {
+            gsap.to(preview, {
+                scrollTrigger: {
+                    scroller: "#main",
+                    trigger: section,
+                    start: start,
+                    end: end,
+                    scrub: 0.125,
+                },
+                clipPath: endClipPath,
+                ease: 'none'
+            });
+        }
+    });
+}
+
+animateClipPath(
+    "#section-1",
+    "#preview-1",
+    "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+);
+
+const totalSections = 4;
+
+for (let i = 1; i <= totalSections; i++) {
+    let currentSection = `#section-${i}`;
+    let prevPreview = `#preview-${i - 1}`;
+    let currentPreview = `#preview-${i}`;
+
+    if (i > 1) {
+        animateClipPath(
+            currentSection,
+            prevPreview,
+            "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            "top bottom",
+            "center center"
+        );
+    }
+
+    if (i < totalSections) {
+        animateClipPath(
+            currentSection,
+            currentPreview,
+            "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+            "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            'center center',
+            'bottom bottom'
+        );
+    }
+}
+
+addImageScrollAnimation();
