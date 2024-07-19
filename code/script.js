@@ -450,3 +450,58 @@ function animateStoreText() {
         ease: "power1.inOut"
     });
 }
+
+function careerPage() {
+    gsap.utils.toArray('.card-hover').forEach((card, index) => {
+        const hovers = card.querySelectorAll('.hover');
+
+        hovers.forEach(hover => {
+            gsap.fromTo(hover, {
+                y: '50%',
+                opacity: 0,
+            },
+            {
+                y: '0%',
+                opacity: 1,
+                duration: 1.5, // Increased duration for a smoother effect
+                ease: "power2.out", // Smoother easing function
+                scrollTrigger: {
+                    scroller: "#main",
+                    trigger: card,
+                    start: 'top 70%', // Adjusted to start slightly later for a smoother start
+                    end: 'top 30%',   // Adjusted to end slightly later
+                    scrub: 0.8,       // Adjusted scrub value for smoother animation
+                }
+            });
+        });
+    });
+}
+
+// Initialize the animations
+careerPage();
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+function careerHeadingAnimation() {
+    gsap.to(".career-heading", {
+        scrollTrigger: {
+            trigger: ".page-7",
+            scroller: "#main",
+            // markers: true,
+            start: "top 80%",
+            end: "top -100%",
+            scrub: 2,
+            // pin: true
+        },
+        rotationX: 10,
+        rotationY: 10,
+        skewY: 17,
+        translateY: 100,
+        opacity: 0,
+        ease: "none"
+    });
+}
+
+// Initialize animations
+careerHeadingAnimation();

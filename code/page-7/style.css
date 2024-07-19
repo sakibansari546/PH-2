@@ -51,14 +51,30 @@
     width: 35vw;
     height: 25vw;
     object-fit: cover;
-    /* margin-bottom: 15vw; */
-}
-
-.career-cards .card-hover:nth-child(1){
-    background-image: url(https://i0.wp.com/mobilegamer.biz/wp-content/uploads/2024/06/squad-busters-art3436.jpg?fit=1785%2C923&ssl=1);
+    background-image: url("https://careerhub.brainwonders.in/assets/career_media/2020/11/career_2020-11-25-13-32-58Art_Director_(1).webp");
+    /* gin-bottom: 15vw; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.career-cards .card-hover:nth-child(1) {
+    background-image: url("https://careerhub.brainwonders.in/assets/career_media/2020/11/career_2020-11-25-13-32-58Art_Director_(1).webp");
+}
+
+.career-cards .card-hover:nth-child(2) {
+    background-image: url("https://supercell.com/_next/static/media/quote_stuart.8e8cd585.jpg");
+}
+
+.career-cards .card-hover:nth-child(3) {
+    background-image: url("https://i.ytimg.com/vi/kl6tjbZUGlM/maxresdefault.jpg");
+}
+
+.career-cards .card-hover:nth-child(4) {
+    background-image: url("https://miro.medium.com/v2/resize:fit:1152/0*V3YXYrKbE5zARzYi.jpg");
+}
+
+.career-cards .card-hover:nth-child(5) {
+    background-image: url("https://emeritus.org/in/wp-content/uploads/sites/3/2022/09/data-science.jpg.webp");
 }
 
 .bg-effect{
@@ -69,7 +85,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    gap: 7px;
     align-items: baseline;
     justify-content: end;
     padding-left: 2vw;
@@ -81,6 +97,10 @@
     background-color: white;
     color: black;
     padding: 10px 19px;
+}
+.hover h3{
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .hover-1{
