@@ -1,0 +1,92 @@
+.page-7 {
+    margin-top: 40vw;
+    padding: 5rem 10rem;
+}
+
+.page-7 .hero-section {
+    width: 100%;
+    height: 70vh;
+}
+
+.career-heading h2 {
+    font-family: 'Teko' !important;
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: -50px;
+}
+
+
+.career-heading .hero-sm-heading{
+    font-size: 3rem;
+    font-weight: 600;
+    width: 43vw;
+}
+.career-heading button{
+    padding: 17px 30px;
+    margin-top: 20px;
+    outline: 0;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+
+.career-cards{
+    /* margin-inline: 10vw; */
+    margin-block: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+.career-cards .card:nth-child(even){
+    margin-top: 5vw;
+}
+
+.career-cards .card-hover{
+   background: rgba(255, 255, 255, 0.158);
+    width: 35vw;
+    height: 25vw;
+    object-fit: cover;
+    /* margin-bottom: 15vw; */
+}
+
+.career-cards .card-hover:nth-child(1){
+    background-image: url(https://i0.wp.com/mobilegamer.biz/wp-content/uploads/2024/06/squad-busters-art3436.jpg?fit=1785%2C923&ssl=1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-effect{
+    background-color: rgba(0, 0, 0, 0.459);
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: baseline;
+    justify-content: end;
+    padding-left: 2vw;
+    padding-bottom: 4vw;
+
+}
+
+.hover{
+    background-color: white;
+    color: black;
+    padding: 10px 19px;
+}
+
+.hover-1{
+    font-size: 1.8vw;
+}
+.hover-2{
+    font-size: 1.1vw;
+    text-transform: uppercase;
+}
